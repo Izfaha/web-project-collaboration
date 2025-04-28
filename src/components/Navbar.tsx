@@ -1,12 +1,4 @@
 import React from "react";
-import { Inter, Montserrat } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const montserrat = Montserrat({
-    subsets: ["latin"],
-    weight: ["600"],
-    variable: "--font-mont",
-});
 
 const Navbar = () => {
     return (
