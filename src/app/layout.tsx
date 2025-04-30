@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${courierPrimeFont.className}`}>
+      <body>
         <Navbar/>
         {children}
         <Footer/>

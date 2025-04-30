@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from "react";
 
 const Navbar = () => {
@@ -8,14 +9,18 @@ const Navbar = () => {
                 <span className="text-4xl font-bold">SiBer</span>
                 {/* menu in the middle as visual */}
                 <ul className="flex text-xl space-x-12">
-                    {["Home", "Challenge", "Leaderboard", "About me"].map((item) => (
-                        <li
-                            key={item}
-                            className="hover:bg-amber-100 hover:shadow hover:rounded-full px-4 py-2 cursor-pointer"
-                        >
-                            {item}
-                        </li>
-                    ))}
+                    <li>
+                        <div>
+                            <img 
+                            src="./home.png" 
+                            loader={imageLoader}
+                            width={10}
+                            height={10}
+                            alt='home logo'
+                            />
+                            <p>Home</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
