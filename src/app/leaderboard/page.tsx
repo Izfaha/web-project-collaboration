@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export default function leaderboard() {
     return (
         <section>
@@ -13,8 +14,10 @@ export default function leaderboard() {
 
                     {/* second position */}
                     <div className="flex flex-col items-center h-50">
-                        <img
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="second position"
                             className="w-32 h-32 rounded-full border-4 border-green-500"
                         />
@@ -27,8 +30,10 @@ export default function leaderboard() {
 
                     <div className="flex flex-col items-center h-80">
                         {/* first Position */}
-                        <img
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="first position"
                             className="w-35 h-35 rounded-full border-4 border-yellow-500"
                         />
@@ -41,8 +46,10 @@ export default function leaderboard() {
 
                     <div className="flex flex-col items-center">
                         {/* third position */}
-                        <img
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
@@ -57,199 +64,213 @@ export default function leaderboard() {
 
             {/* halaman bawah */}
             <main className="relative min-h-[50vh] ">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-fit bg-gray-100 -z-10">
-            {/* posisi 4 */}
-            <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-fit bg-gray-100 -z-10">
+                    {/* posisi 4 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
-
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
-
-                <h4>Rank<br />
-                    4
-                </h4>
-
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
 
-                {/* posisi 5 */}
-                <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
+
+                        <h4>Rank<br />
+                            4
+                        </h4>
+
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
+
+
+                    {/* posisi 5 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
-
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
-
-                <h4>Rank<br />
-                    4
-                </h4>
-
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
 
-                {/* posisi 6 */}
-                <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
+
+                        <h4>Rank<br />
+                            4
+                        </h4>
+
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
+
+
+                    {/* posisi 6 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
 
-                <h4>Rank<br />
-                    4
-                </h4>
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
 
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Rank<br />
+                            4
+                        </h4>
 
-                {/* posisi 7 */}
-                <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
+
+                    {/* posisi 7 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
 
-                <h4>Rank<br />
-                    4
-                </h4>
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
 
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Rank<br />
+                            4
+                        </h4>
 
-                {/* posisi 8 */}
-                <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
+
+                    {/* posisi 8 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
 
-                <h4>Rank<br />
-                    4
-                </h4>
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
 
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Rank<br />
+                            4
+                        </h4>
 
-                {/* posisi 9 */}
-                <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
+
+                    {/* posisi 9 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
 
-                <h4>Rank<br />
-                    4
-                </h4>
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
 
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Rank<br />
+                            4
+                        </h4>
 
-                {/* posisi 10 */}
-                <div className="flex justify-evenly items-start rounded-xl p-8">                        
-                <img
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
+
+                    {/* posisi 10 */}
+                    <div className="flex justify-evenly items-start rounded-xl p-8">
+                        <Image
                             src="/path/to/book.png"
+                            width={20}
+                            height={20}
                             alt="third position"
                             className="w-28 h-28 rounded-full border-4 border-red-500"
                         />
 
-                <h4>Andre <br />
-                    Penguasa Empat Besar
-                </h4>
+                        <h4>Andre <br />
+                            Penguasa Empat Besar
+                        </h4>
 
-                
-                <div className="w-[2px] h-32 bg-red-400"></div>
-                <h4>Score <br />
-                    1450
-                </h4>
 
-                <h4>Rank<br />
-                    4
-                </h4>
+                        <div className="w-[2px] h-32 bg-red-400"></div>
+                        <h4>Score <br />
+                            1450
+                        </h4>
 
-                <h4>Progres <br />
-                    90%
-                </h4></div>
+                        <h4>Rank<br />
+                            4
+                        </h4>
 
-                
-            </div>
+                        <h4>Progres <br />
+                            90%
+                        </h4></div>
 
-            
 
-        </main>
+                </div>
 
-            
+
+
+            </main>
+
+
         </section>
     )
 }
