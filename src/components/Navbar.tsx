@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image' // if using I while importing Image besar maka di elemen image harus besar => Image
 import React from "react";
 
 const Navbar = () => {
@@ -11,11 +11,12 @@ const Navbar = () => {
                 <ul className="flex text-xl space-x-12">
                     <li>
                         <div>
-                            <img 
-                            src="./home.png" 
+                            {/* I nya besar karena di atas I nya besar */}
+                            <Image 
+                            src="/image/home.png" 
                             width={10}
                             height={10}
-                            alt='home logo'
+                            alt="home-logo"
                             />
                             <p>Home</p>
                         </div>
