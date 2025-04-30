@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
     return (
-        <nav className=" bg-[#00558c] shadow-md px-8 py-4">
+        <nav className=" bg-white shadow-md px-8 py-4">
             <div className="mx-auto flex justify-between items-center max-w-7xl">
                 {/* nama in the left */}
                 <span className="text-4xl font-bold">SiBer</span>
