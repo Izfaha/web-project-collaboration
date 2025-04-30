@@ -1,9 +1,8 @@
-import { courierPrime } from '@/lib/fonts';  
 import React from 'react'
 
 const Page = () => {
   return (
-    <section className={courierPrime.variable}> {/* Menambahkan className */}
+    <section> 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Porro perferendis commodi obcaecati id laborum enim doloremque 

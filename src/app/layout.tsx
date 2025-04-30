@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { courierPrime } from '../lib/fonts'
+//import { Courier_Prime } from 'next/font/google';
 //import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./globals.css";
+import { courierPrimeFont } from "@/lib/fonts";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -26,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${courierPrime.variable}`}>
-      <body>
+    <html lang="en">
+      <body className={`${courierPrimeFont.className}`}>
         <Navbar/>
         {children}
         <Footer/>

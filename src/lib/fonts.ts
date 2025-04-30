@@ -1,19 +1,9 @@
-// src/lib/fonts.ts
-import localFont from "next/font/local";
+import { Courier_Prime } from "next/font/google";
 
-export const courierPrime = localFont({
-    src: [
-        {
-            path: "/fonts/courier-prime/CourierPrime-Regular.ttf", // Perbaiki path
-            weight: "400",
-            style: "normal",
-        },
-        {
-            path: "/fonts/courier-prime/CourierPrime-Bold.ttf", // Perbaiki path
-            weight: "700",
-            style: "normal",
-        },
-    ],
-    variable: "--font-courier-prime", // create a CSS variable
-    display: "swap",
-});
+export const courierPrimeFont = Courier_Prime({
+    subsets: ['latin'],
+    weight: '400',
+    style: 'normal',
+    display:'swap',
+    variable: '--font-courier-prime',
+})
