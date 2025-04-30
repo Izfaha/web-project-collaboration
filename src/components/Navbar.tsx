@@ -13,7 +13,6 @@ const Navbar = () => {
                         <div>
                             <img 
                             src="./home.png" 
-                            loader={imageLoader}
                             width={10}
                             height={10}
                             alt='home logo'
