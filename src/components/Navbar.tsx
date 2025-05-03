@@ -7,20 +7,20 @@ const Navbar = () => {
             {/* left side */}
             <div className="flex place-items-center mr-auto">
                 {/* nama in the left */}
-                <span className="text-4xl font-bold mr-10 ml-16">SiBer</span>
+                <a href="http://"><span className="text-4xl font-bold mr-10 ml-16">SiBer</span></a>
                 {/* menu in the middle as visual */}
                 <ul className="flex text-xl place-items-center">
                     {/* Home logo */}
                     <li className='mr-7'>
                         <div className='place-items-center'>
                             {/* I nya besar karena di atas I nya besar */}
-                            <Image
-                                src="/image/home.png"
-                                width={25}
-                                height={25}
-                                alt="home-logo"
-                            />
-                            <p>Home</p>
+                                <Image
+                                    src="/image/home.png"
+                                    width={25}
+                                    height={25}
+                                    alt="home-logo"
+                                />
+                                <a href="http://">Home</a>
                         </div>
                     </li>
                     {/* Challenge logo */}
@@ -33,7 +33,7 @@ const Navbar = () => {
                                 height={25}
                                 alt="challenge-logo"
                             />
-                            <p>Challenge</p>
+                            <a href="http://">Challenge</a>
                         </div>
                     </li>
                     {/* Leaderboard logo */}
@@ -46,7 +46,7 @@ const Navbar = () => {
                                 height={25}
                                 alt="leaderboard-logo"
                             />
-                            <a>Leaderboard</a>
+                            <a href='#'>Leaderboard</a>
                         </div>
                     </li>
                 </ul>

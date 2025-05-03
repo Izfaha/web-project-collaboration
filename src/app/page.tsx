@@ -3,11 +3,11 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <section>
+    <section className='font-noto-sans-font'>
       {/* Top homepage */}
       <div className='bg-[#06304b] text-white'>
         <div className='p-[170]'>
-          <h1 className='text-4xl'>Anyone can learn cyber security <br /> with SiBer (Si Bertahan)</h1>
+          <h1 className='text-4xl font-semibold'>Anyone can learn cyber security <br /> with SiBer (Si Bertahan)</h1>
           <br />
           <p>Hands-on cyber security training through real-world scenarios</p>
           <br />
@@ -16,7 +16,7 @@ const Page = () => {
           <div>
             <form action="#" method="get">
               <input type="text" name="search" className='border-2 px-4 py-2 rounded-[7px] mr-7 w-[400]' />
-              <button type="submit" className='border-2 px-4 py-2 rounded-[7px]'>
+              <button type="submit" className='border-2 px-4 py-2 rounded-[7px] hover:bg-white hover:text-black cursor-pointer'>
                 Join for FREE
               </button>
             </form>

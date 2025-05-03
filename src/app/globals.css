@@ -25,3 +25,10 @@
   font-family: Arial, Helvetica, sans-serif;
   font-family: var(--font-courier-prime), monospace;
 }  */
+
+
+/* custom font */
+@theme inline{
+  --font-courier-prime-font: var(--font-courier-prime);
+  --font-noto-sans-font: var(--noto-sans);
+}
