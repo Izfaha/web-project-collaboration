@@ -7,7 +7,7 @@ const Navbar = () => {
             {/* left side */}
             <div className="flex place-items-center mr-auto">
                 {/* nama in the left */}
-                <a href="http://"><span className="text-4xl font-bold mr-10 ml-16">SiBer</span></a>
+                <a href="http://"><span className="text-4xl font-bold mr-10 ml-auto">SiBer</span></a>
                 {/* menu in the middle as visual */}
                 <ul className="flex text-xl place-items-center">
                     {/* Home logo */}
@@ -28,7 +28,7 @@ const Navbar = () => {
                         <div className='place-items-center'>
                             {/* I nya besar karena di atas I nya besar */}
                             <Image
-                                src="/image/book.png"
+                                src="/image/book-black.png"
                                 width={25}
                                 height={25}
                                 alt="challenge-logo"
