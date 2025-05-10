@@ -1,28 +1,9 @@
 import type { Metadata } from "next";
 //import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import "./globals.css";
 // import { courierPrimeFont } from "@/lib/fonts";
 import { courierPrimeFont, notoSans } from "@/lib/fonts";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-// const courierPrimeFont = Courier_Prime({
-//     subsets: ['latin'],
-//     weight: '400',
-//     style: 'normal',
-//     display:'swap',
-//     variable: '--font-courier-prime',
-// })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${courierPrimeFont.variable} ${notoSans.variable}`}>
-        <Navbar/>
         {children}
         <Footer/>
       </body>
