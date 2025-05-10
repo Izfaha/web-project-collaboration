@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Page = () => {
@@ -83,15 +82,6 @@ const Page = () => {
 
   return (
     <section className="font-noto-sans-font">
-      {/* Navigation Bar */}
-      <Header 
-        isLoggedIn={isLoggedIn}
-        username={username}
-        setShowLoginModal={setShowLoginModal}
-        setShowRegisterModal={setShowRegisterModal}
-        setIsLoggedIn={setIsLoggedIn}
-      />
-
       {/* Hero Section */}
       <div className="bg-[#06304b] text-white py-16">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
