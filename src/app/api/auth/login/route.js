@@ -1,53 +1,61 @@
 import { NextResponse } from 'next/server';
+import dbConnect from '@/lib/mongodb';
+import User from '@/models/User';
+import jwt from 'jsonwebtoken';
 
 export async function POST(request) {
   try {
+    await dbConnect();
     const body = await request.json();
     const { email, password } = body;
 
-    // Input validation
+    // Validate input
     if (!email || !password) {
       return NextResponse.json(
-        { message: 'Email and password are required' },
+        { success: false, message: 'Please provide email and password' },
         { status: 400 }
       );
     }
 
-    // Forward request to Express backend
-    const backendUrl = process.env.NODE_ENV === 'production'
-      ? 'https://your-production-backend.com/api/users/login'
-      : 'http://localhost:3000/api/users/login';
-
-    const response = await fetch(backendUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
+    // Check if user exists
+    const user = await User.findOne({ email });
+    if (!user) {
       return NextResponse.json(
-        { message: data.message || 'Login failed' },
-        { status: response.status }
+        { success: false, message: 'Invalid credentials' },
+        { status: 401 }
       );
     }
 
-    // Return user data
+    // Check if password matches
+    const isMatch = await user.comparePassword(password);
+    if (!isMatch) {
+      return NextResponse.json(
+        { success: false, message: 'Invalid credentials' },
+        { status: 401 }
+      );
+    }
+
+    // Generate token
+    const token = jwt.sign(
+      { id: user._id }, 
+      process.env.JWT_SECRET || 'your_jwt_secret', 
+      { expiresIn: '1d' }
+    );
+
     return NextResponse.json({
+      success: true,
       message: 'Login successful',
+      token,
       user: {
-        id: data.userId,
-        email: email,
-        name: data.name || email.split('@')[0],
+        id: user._id,
+        username: user.username,
+        email: user.email
       }
     });
   } catch (error) {
     console.error('Login error:', error);
     return NextResponse.json(
-      { message: 'Server error during login' },
+      { success: false, message: 'Server error during login' },
       { status: 500 }
     );
   }

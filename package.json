@@ -4,7 +4,7 @@
   "description": "Web project with user authentication using Next.js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

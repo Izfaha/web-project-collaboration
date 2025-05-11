@@ -8,16 +8,16 @@ if (!MONGODB_URI) {
   );
 }
 
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
- */
 let cached = global.mongoose;
 
 if (!cached) {
   cached = global.mongoose = { conn: null, promise: null };
 }
+
+// Define MongoDB connection options
+const opts = {
+  bufferCommands: false,
+};
 
 async function dbConnect() {
   if (cached.conn) {
@@ -25,11 +25,6 @@ async function dbConnect() {
   }
 
   if (!cached.promise) {
-    const opts = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    };
-
     cached.promise = mongoose.connect(MONGODB_URI, opts)
       .then(mongoose => {
         console.log('MongoDB connected successfully');

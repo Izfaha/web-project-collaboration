@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     unique: true,
-    trim: true
+    trim: true,
     // No longer required
   },
   email: {
@@ -47,9 +47,14 @@ UserSchema.pre('save', async function(next) {
   }
 });
 
-// Method to compare passwords
+// Method to compare passwords with improved error handling
 UserSchema.methods.comparePassword = async function(candidatePassword) {
-  return await bcrypt.compare(candidatePassword, this.password);
+  try {
+    return await bcrypt.compare(candidatePassword, this.password);
+  } catch (error) {
+    console.error('Error comparing passwords:', error);
+    return false; // Return false instead of throwing an error
+  }
 };
 
 // This is important to prevent model recompilation errors in Next.js hot reload environment

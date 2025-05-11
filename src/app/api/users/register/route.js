@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import User from '@/models/User';
 import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
 
 export async function POST(request) {
   try {
@@ -37,7 +38,7 @@ export async function POST(request) {
     // Auto-generate username from email
     const username = email.split('@')[0];
 
-    // Create user
+    // Create user (password hashing is handled by the model's pre-save hook)
     const user = await User.create({
       username,
       email,
