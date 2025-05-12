@@ -34,7 +34,7 @@ const Header = ({
         <div className="flex space-x-4">
           <Link href="/" className="hover:text-gray-300">Home</Link>
           <Link href="/courses" className="hover:text-gray-300">Courses</Link>
-          <Link href="/challenges" className="hover:text-gray-300">Challenges</Link>
+          <Link href="/challenge" className="hover:text-gray-300">Challenges</Link>
           <Link href="/community" className="hover:text-gray-300">Community</Link>
           <Link href="/about" className="hover:text-gray-300">About</Link>
         </div>
