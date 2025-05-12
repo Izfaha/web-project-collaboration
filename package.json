@@ -1,6 +1,7 @@
 {
-  "name": "web-asm",
-  "version": "0.1.0",
+  "name": "web-project-collaboration",
+  "version": "1.0.0",
+  "description": "Web project with user authentication using Next.js",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -10,9 +11,13 @@
   },
   "dependencies": {
     "@xterm/xterm": "^5.5.0",
-    "next": "15.3.1",
+    "next": "^15.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "mongoose": "^8.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "jose": "^5.1.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -20,8 +25,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "postcss": "^8.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
